@@ -1,0 +1,357 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Global css */
+:root {
+    --sideBGColor: #040b14;
+    --themColor: #00A78E;
+    --iconBGColor: #2c2F3F;
+    --textColor: #525252;
+    --bgColor: #F7F7F7;
+}
+
+/* ===== Header Start ===== */
+header {
+    height: 100vh;
+    width: 300px;
+    padding: 15px 30px;
+    background-color: var(--sideBGColor);
+    overflow-y: auto;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    transition: 0.4s;
+    z-index: 99;
+}
+
+header .protfolio {
+    text-align: center;
+    margin: 10px 0px;
+}
+
+header .protfolio>img {
+    width: 180px;
+    border-radius: 50%;
+
+    border: 10px solid var(--iconBGColor);
+}
+
+header .protfolio>img:hover {
+    transition: 0s;
+    box-shadow: 0 0 10px var(--themColor), 0 0 30px var(--themColor), 0 0 50px var(--themColor);
+
+}
+
+header .protfolio>h1 {
+    color: rgba(255, 255, 255, 0);
+    font-weight: 600;
+    margin: 10px;
+    position: relative;
+
+}
+
+header .protfolio>h1::before {
+    content: 'Maimun Nisha';
+    position: absolute;
+    height: 100%;
+    top: 0;
+    white-space: nowrap;
+    left: 0;
+    width: 0;
+    overflow: hidden;
+    color: var(--themColor);
+    border-right: var(--themColor) 3px solid;
+    animation: load 5s linear infinite;
+}
+
+@keyframes load {
+
+    0% {
+        width: 0;
+    }
+
+
+    100% {
+        width: 100%;
+    }
+}
+
+header .protfolio .social-icons>a {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 37px;
+    background-color: var(--iconBGColor);
+    color: white;
+    margin: 1.5px;
+    transition: 0.4s;
+}
+
+header .protfolio .social-icons>a:hover {
+    background-color: var(--themColor);
+    box-shadow: 0 0 10px var(--themColor), 0 0 30px var(--themColor), 0 0 50px var(--themColor);
+
+}
+
+/* NavBar */
+header>nav {
+    margin-top: 30px;
+}
+
+header>nav>ul>li {
+    list-style: none;
+}
+
+header>nav>ul>li>a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 10px;
+    margin: 7px 0px;
+    color: lightgray;
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 0.6px;
+}
+
+header>nav>ul>li>a>i {
+    margin-right: 10px;
+    font-size: 20px;
+    transition: 0.4s;
+}
+
+header>nav>ul>li>a:hover i {
+    color: var(--themColor);
+
+
+}
+
+header>nav>ul>li .active {
+    color: var(--themColor);
+
+}
+
+/* / */
+/* Footer */
+header .footer {
+    text-align: center;
+    background-color: var(--sideBGColor);
+    width: 300px;
+    color: lightgray;
+    font-size: 14px;
+    letter-spacing: 0.6px;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    transition: 0.4s;
+}
+
+header .footer>p>a {
+    color: var(--themColor);
+}
+
+/* / */
+/* Mobile Nav Toggle */
+#MenuBtn {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    color: white;
+    background-color: var(--themColor);
+    text-align: center;
+    line-height: 42px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 20%);
+    z-index: 999;
+    display: none;
+    cursor: pointer;
+}
+
+/* Mobile Veiw */
+@media only screen and (max-width : 1050px) {
+    header {
+        left: -300px;
+    }
+
+    header .footer {
+        left: -300px;
+    }
+
+    #MenuBtn {
+        display: block;
+    }
+}
+
+/* header toggle */
+.mobile-nav-active header {
+    left: 0;
+}
+
+.mobile-nav-active header .footer {
+    left: 0;
+}
+
+/* / */
+/* /Mobile Veiw */
+/* ===== Header End ===== */
+/* ******************************************************************************** */
+
+/* === MAIN SECTION === */
+main {
+    margin-left: 300px;
+    background-color: var(--bgColor);
+    transition: 0.3s;
+}
+
+@media only screen and (max-width:1050px) {
+    main {
+        margin-left: 0;
+    }
+}
+
+/* === Home Section === */
+#home {
+    height: 100vh;
+    width: 100%;
+    background-image: url('img/5651986.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 70px;
+    position: relative;
+
+}
+
+#home::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(4, 11, 20, 0.431);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.home-img {
+    height: 400px;
+    width: 400px;
+    position: relative;
+    /* right:15%; */
+    margin-left: 45%;
+    bottom: 15%;
+}
+
+.home-img>img {
+    position: absolute;
+    top: -22px;
+}
+
+.home-img::before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: '';
+    bottom: -30%;
+    background-image: linear-gradient(11deg, #00A78E 0%, #040b14 100%);
+    z-index: 0;
+    transition: all .5s ease-in-out;
+    border-radius: 100% 73% 100% 72% / 99% 86% 75% 63%;
+    box-shadow: 2px 10px 0px 0px rgba(216, 19, 19, 0.16);
+}
+
+.home-img:hover {
+    transform: translateY(-10.5px);
+}
+
+.home-img img {
+    /* border-radius: 100% 73% 100% 72% / 99% 86% 75% 63%; */
+    border-radius: 133% 89%;
+}
+
+.home-img:hover::before {
+    filter: drop-shadow(0 0 30px rgba(130, 237, 255, 0.97));
+}
+
+#home .home-row {
+    z-index: 100;
+}
+
+#home .home-row>h1 {
+    font-size: 60px;
+    color: white;
+    font-weight: 600;
+    letter-spacing: -1px;
+    margin-bottom: 10px;
+    line-height: 70px;
+}
+
+#home .home-row>h1>span {
+    color: var(--themColor);
+}
+
+#home .home-row>p {
+    color: whitesmoke;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+#home .home-row>p>span {
+    border-bottom: 4px solid var(--themColor);
+}
+
+/* Mobile Veiw */
+@media only screen and (max-width : 670px) {
+    #home {
+        padding: 30px;
+    }
+
+    #home .home-row>h1 {
+        font-size: 35px;
+        letter-spacing: 0;
+        line-height: 50px;
+    }
+
+    #home .home-row>h1>br {
+        display: none;
+    }
+
+    #home .home-row>p {
+        color: whitesmoke;
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    .home-img {
+        height: 200px;
+        width: 200px;
+        position: relative;
+        /* right:15%; */
+        margin-left: 5%;
+        bottom: 1%;
+    }
+
+    .home-img>img {
+        position: absolute;
+        height: 250px;
+        width: 250px;
+        top: 11px;
+left: -18px;    }
+}
